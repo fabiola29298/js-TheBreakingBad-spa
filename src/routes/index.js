@@ -14,6 +14,7 @@ const routes = {
   '/characters/:id': CharacterItem,
   '/episodes/:id': EpisodeItem,
   '/characters': Characters,
+  '/charactersPag/:id': Characters,
   '/episodes': Episodes,
 };
 
@@ -22,8 +23,9 @@ const router = async () => {
   const content = null || document.getElementById('content');
 
   header.innerHTML = await Header();
-  let hash = getHash();
+  let hash = getHash(); // obtein the url
   let route = await resolveRoutes(hash);
+  console.log(`route ${route}`);
   let render = routes[route] ? routes[route] : Error404;
   content.innerHTML = await render();
 };

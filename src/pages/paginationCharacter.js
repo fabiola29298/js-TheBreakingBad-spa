@@ -1,7 +1,7 @@
 
 const paginationCharacter = async () => {
   let view = `<div class="pagination">`;
-  for(let i=1; i<=12; i++){
+  for(let i=1; i<=7; i++){
     view += `<a href="#/characters-pag/${i}"> ${i} </a> `
   }
   view +=`</div>`;

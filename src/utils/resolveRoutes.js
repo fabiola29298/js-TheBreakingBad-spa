@@ -6,7 +6,7 @@ const resolveRoutes = (route) => {
   }
   // pagination
   else if (route.split('/')[0].includes('pag')) {
-    return '/characters-pag/:id';
+    return '/charactersPag/:id';
   }
   // individual item
   else if (route.split('/')[1] != undefined){

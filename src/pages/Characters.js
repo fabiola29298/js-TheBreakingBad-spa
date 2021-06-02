@@ -1,7 +1,9 @@
 import getCharacter from '../utils/getCharacter';
+import getHash from '../utils/getHash';
 import paginationCharacter from './paginationCharacter';
 const Characters = async () => {
-  const characters = await getCharacter();
+  const id = getHash() || '';
+  const characters = await getCharacter(id);
 
   const view = `
      <h4> Characters </h4>
