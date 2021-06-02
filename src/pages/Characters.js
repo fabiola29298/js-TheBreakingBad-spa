@@ -1,15 +1,19 @@
-const Characters = () => {
-  const view = `
-  <h2> Character </h2>
-  <div class="Characters">
+import getCharacter from '../utils/getCharacter';
 
-      <article class="Character-item">
-        <a href="#/1/">
-          <img src="image.jpg" alt="iamge">
-          <h3>Character</h3>
-        </a>
-      </article>
-  </div>
+const Characters = async () => {
+  const characters = await getCharacter();
+
+  const view = `
+    <div class="Characters">
+      ${characters.map(character => `
+        <article class="Character-item">
+          <a href="#/${character.id}/">
+            <img src="${character.img}" alt="${character.name}">
+            <h2> ${character.name} </h2>
+          </a>
+        </article>
+      `).join('')}
+    </div>
   `;
   return view;
 };

@@ -1,17 +1,21 @@
-const Episodes = () => {
-  const view = `
-  <h2> Episodes </h2>
-  <div class="Characters">
+import getEpisode from '../utils/getEpisode';
 
-      <article class="Character-item">
-        <a href="#/1/">
-          <img src="image.jpg" alt="iamge">
-          <h3>Episodes</h3>
-        </a>
-      </article>
-  </div>
+  const Episodes = async () => {
+    const episodes = await getEpisode();
+    console.log(episodes);
+    const view = `
+    <div class="Episodes">
+      ${episodes.map(episode => `
+        <article class="episode-item">
+          <a href="#/${episode.episode_id}/">
+            <h2> ${episode.title} </h2>
+            <h2> ${episode.season} </h2>
+          </a>
+        </article>
+      `).join('')}
+    </div>
   `;
-  return view;
-};
+    return view;
+  };
 
 export default Episodes;
