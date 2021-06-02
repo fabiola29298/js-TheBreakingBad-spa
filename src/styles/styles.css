@@ -104,3 +104,41 @@ img{
 .character-item > h4{
   margin-inline: 1rem;
 }
+/* episode-item   */
+.characters-card{
+  display: flex;
+  flex-direction: column;
+}
+.episode-item{
+  margin: 1rem;
+  padding: .5rem;
+  box-sizing: border-box;
+  background: var(--grey50);
+  display: flex;
+  flex: auto;
+}
+.column2{
+  flex: 1;
+}
+.column2 > p {
+  color:  var(--grey40);
+  cursor: pointer;
+  text-align: end;
+  font-size: 14px;
+}
+.column2 > p:hover {
+  color:  var(--white40);
+}
+.column{
+  min-width: 80%;
+}
+.column > h5 {
+  color:  var(--white40);
+   font-size: 18px;
+   margin: 0;
+}
+ .column > p {
+  font-size: 1rem;
+   color: var(--grey40);
+   margin: 0;
+}
