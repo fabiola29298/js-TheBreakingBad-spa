@@ -1,26 +1,22 @@
+import Characters from '../pages/Characters';
+import Episodes from '../pages/Episodes';
+
 const Home = async () => {
 
   const view = `
-  <h2> Home </h2>
-    <div class="Characters">
-
-        <article class="Character-item">
-          <a href="#/characters/1/">
-            <img src="image.jpg" alt="iamge">
-            <h3>character</h3>
-          </a>
-        </article>
+  <h4> Home </h4>
+  <div class="wrapper">
+    <h3>Character</h3>
+    <div id="characters">
+      ${await Characters()}
     </div>
-  <div class="Episodes">
-
-      <article class="Character-item">
-        <a href="#/episodes/1/">
-          <img src="image.jpg" alt="iamge">
-          <h3>episodes</h3>
-        </a>
-      </article>
+    <h3>Episodes</h3>
+    <div class="Episodes">
+      ${await Episodes()}
+    </div>
   </div>
   `;
+
   return view;
 };
 
