@@ -4,7 +4,6 @@ import getEpisode from '../utils/getEpisode';
 const EpisodeItem = async () => {
   const id = getHash();
   const episode = await getEpisode(id);
-  console.log(episode);
   const view = `
   <div class="episodes-inner">
       <article class="episode-card">
