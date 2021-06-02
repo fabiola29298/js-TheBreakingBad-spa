@@ -14,7 +14,7 @@ const Characters = async () => {
       ${characters.map(character => `
       <a href="#/characters/${character.char_id}/">
         <article class="character-item-info">
-            <img src="${character.img}" height="120px" alt="${character.name}">
+            <div class="img-container"> <img src="${character.img}" min-wight="32%" min-height="120px" alt="${character.name}"></div>
             <h4> ${character.name}
               <p> More> </p>
             </h4>
@@ -22,6 +22,7 @@ const Characters = async () => {
       </a>
       `).join('')}
     </div>
+    ${await paginationCharacter()}
   </div>
   `;
   return view;

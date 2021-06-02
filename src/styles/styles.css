@@ -83,6 +83,7 @@ img{
 }
 .wrapper{
   padding-inline: 2rem;
+  padding-block-end: 1rem;
 }
 /* characters-card   */
 .characters-card{
@@ -94,11 +95,14 @@ img{
   background: var(--grey50);
   display: flex;
   flex: 1;
-  margin: 1rem;
+  margin: .2rem 1rem;
+  align-items: center;
 }
-.character-item-info > img{
-  min-height: 120px;
-  min-width: 32%;
+.character-item-info * img{
+  width: 70px;
+}
+.img-container{
+  /* width: ; */
 }
 .character-item-info > h4{
   margin-inline: 1rem;
@@ -163,6 +167,25 @@ img{
 .character-info * img{
   width: 70%;
   height: 100%;
+}
+/* pagination   */
+.paragraph{
+  margin: .5rem;
+  display: inline;
+  font-size: 16px;
+}
+.pagination{
+  display: block;
+  margin-inline: .5rem;
+}
+.pagination-content{
+  background: var(--grey50);
+  padding-inline: .9rem;
+  display: inline-flex;
+  gap: .8rem;
+}
+.pagination-content > a{
+  text-decoration: underline;
 }
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
