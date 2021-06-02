@@ -8,7 +8,7 @@ const Characters = async () => {
       ${characters.map(character => `
         <article class="Character-item">
           <a href="#/characters/${character.char_id}/">
-            <img src="${character.img}" alt="${character.name}">
+            <img src="${character.img}" height="150px" alt="${character.name}">
             <h2> ${character.name} </h2>
           </a>
         </article>

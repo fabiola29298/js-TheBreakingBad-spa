@@ -2,7 +2,6 @@ import getEpisode from '../utils/getEpisode';
 
   const Episodes = async () => {
     const episodes = await getEpisode();
-    console.log(episodes);
     const view = `
     <div class="Episodes">
       ${episodes.map(episode => `
