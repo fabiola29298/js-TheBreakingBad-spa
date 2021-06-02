@@ -1,15 +1,25 @@
 const resolveRoutes = (route) => {
+  console.log(`resolveroutes ${route}`);
+  //home
   if (route === '/') {
     return route;
   }
-  if (route.split('/')[1] != undefined){
+  // pagination
+  else if (route.split('/')[0].includes('pag')) {
+    return '/characters-pag/:id';
+  }
+  // individual item
+  else if (route.split('/')[1] != undefined){
+
     if (route.split('/')[0] === 'episodes'){
       return '/episodes/:id';
+    }else {
+      return '/characters/:id';
     }
-    return '/characters/:id';
   }
 
-  return `/${route}`; // /about
+  // episodes or character
+  return `/${route}`;
 }
 
 export default resolveRoutes;
