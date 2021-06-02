@@ -1,12 +1,14 @@
 import getCharacter from '../utils/getCharacter';
-
+import paginationCharacter from './paginationCharacter';
 const Characters = async () => {
   const characters = await getCharacter();
 
   const view = `
      <h4> Characters </h4>
     <div class="wrapper">
+     ${await paginationCharacter()}
     <div class="characters-card">
+
       ${characters.map(character => `
       <a href="#/characters/${character.char_id}/">
         <article class="character-item-info">
