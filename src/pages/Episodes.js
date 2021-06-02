@@ -7,7 +7,7 @@ import getEpisode from '../utils/getEpisode';
     <div class="Episodes">
       ${episodes.map(episode => `
         <article class="episode-item">
-          <a href="#/${episode.episode_id}/">
+          <a href="#/episodes/${episode.episode_id}/">
             <h2> ${episode.title} </h2>
             <h2> ${episode.season} </h2>
           </a>
