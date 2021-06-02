@@ -164,3 +164,52 @@ img{
   width: 70%;
   height: 100%;
 }
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .wrapper{
+    width: 390px;
+    margin: auto;
+  }
+  .episode-card, .characters-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .episode-item, .character-item-info{
+    flex: 1 1 260px;
+    margin: 5px;
+    width: 340px;
+  }
+  .characters-card{
+    align-items: center;
+    flex-direction: row;
+  }
+  .character-item-info{
+    width: 300px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .wrapper{
+    width: 950px;
+    margin: auto;
+  }
+  .episode-card, .characters-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .episode-item, .character-item-info{
+    flex: 1 1 260px;
+    margin: 5px;
+    width: 340px;
+  }
+  .characters-card{
+    align-items: center;
+    flex-direction: row;
+  }
+  .character-item-info{
+    width: 300px;
+  }
+}
