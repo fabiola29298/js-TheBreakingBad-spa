@@ -39,6 +39,7 @@ h3{
   font-size: 32px;
   line-height: 32px;
   color: var(--white40);
+  margin: 0;
 }
 h4{
   font-weight: bold;
@@ -83,4 +84,23 @@ img{
 }
 .wrapper{
   padding-inline: 2rem;
+}
+/* characters-card   */
+.characters-card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.character-item{
+  background: var(--grey50);
+  display: flex;
+  flex: 1;
+  margin: 1rem;
+}
+.character-item > img{
+  min-height: 130px;
+  min-width: 40%;
+}
+.character-item > h4{
+  margin-inline: 1rem;
 }

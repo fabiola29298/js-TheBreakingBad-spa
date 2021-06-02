@@ -4,14 +4,14 @@ const Characters = async () => {
   const characters = await getCharacter();
 
   const view = `
-    <div class="Characters">
+    <div class="characters-card">
       ${characters.map(character => `
-        <article class="Character-item">
-          <a href="#/characters/${character.char_id}/">
-            <img src="${character.img}" height="150px" alt="${character.name}">
-            <h2> ${character.name} </h2>
-          </a>
+      <a href="#/characters/${character.char_id}/">
+        <article class="character-item">
+            <img src="${character.img}" height="130px" alt="${character.name}">
+            <h4> ${character.name} </h4>
         </article>
+      </a>
       `).join('')}
     </div>
   `;

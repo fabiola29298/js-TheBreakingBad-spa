@@ -6,7 +6,7 @@ const Home = async () => {
   const view = `
   <h4> Home </h4>
   <div class="wrapper">
-    <h3>Character</h3>
+    <h3>Characters</h3>
     <div id="characters">
       ${await Characters()}
     </div>
