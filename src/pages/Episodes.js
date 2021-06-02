@@ -3,6 +3,8 @@ import getEpisode from '../utils/getEpisode';
   const Episodes = async () => {
     const episodes = await getEpisode();
     const view = `
+    <h4> Episodes </h4>
+    <div class="wrapper">
     <div class="episode-card">
       ${episodes.map(episode => `
       <a href="#/episodes/${episode.episode_id}/">
@@ -17,6 +19,7 @@ import getEpisode from '../utils/getEpisode';
         </div>
       </a>
       `).join('')}
+    </div>
     </div>
   `;
     return view;

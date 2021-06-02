@@ -5,17 +5,20 @@ const EpisodeItem = async () => {
   const id = getHash();
   const episode = await getEpisode(id);
   const view = `
-  <div class="episodes-inner">
-      <article class="episode-card">
-             <h2>${episode[0].title}</h2>
+  <div class="characters-inner">
+      <h4> Episode </h4>
+      <div class="wrapper">
+      <article class="character-info">
+             <h3>${episode[0].title}</h3>
       </article>
-      <article class="episode-card">
-          <h3>series:<span>${episode[0].series}</span></h3>
-          <h3>season:<span>${episode[0].season}</span></h3>
-          <h3>episode:<span>${episode[0].episode}</span></h3>
-          <h3>air_date:<span>${episode[0].air_date}</span></h3>
-          <h3>characters:<span>${episode[0].characters}</span></h3>
+      <article class="character-info">
+          <h5>Series: <span>${episode[0].series}</span></h5>
+          <h5>Season: <span>${episode[0].season}</span></h5>
+          <h5>Episode: <span>${episode[0].episode}</span></h5>
+          <h5>Air_date: <span>${episode[0].air_date}</span></h5>
+          <h5>Characters: <span>${episode[0].characters}</span></h5>
       </article>
+    </div>
   </div>
   `;
   return view;
