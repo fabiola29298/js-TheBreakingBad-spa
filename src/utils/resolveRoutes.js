@@ -1,5 +1,4 @@
 const resolveRoutes = (route) => {
-  console.log(`resolveroutes ${route}`);
   //home
   if (route === '/') {
     return route;

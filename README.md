@@ -53,7 +53,6 @@ El sistema está dividido en tres secciones:
 
 ## Previsualización
 
-![image](/src/img/preview2.png)
-![image](/src/img/preview1.png)
-![image](/src/img/preview3.png)
+![image](./src/img/preview.png)
+![image](./src/img/preview2.png)
 ##
