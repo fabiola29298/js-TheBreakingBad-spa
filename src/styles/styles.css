@@ -1,3 +1,73 @@
-.Main{
-  background: tan;
+
+:root {
+    --primary: #5928E5;
+    --secondary: #72757E;
+    --grey60: #16161A;
+    --grey50: #242629;
+    --grey40: #94A1B2;
+    --white40: #FFFFFE;
+    --purple30: #7F5AF0;
+    --tertiary40: #2CB67D;
+
+}
+body{
+  font-family: 'Arvo', sans-serif;
+  background: var(--grey60);
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: var(--white40);
+}
+a:hover{
+  color:  var(--secondary);
+}
+h1{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26px;
+  margin: 0;
+  color: var(--white40);
+}
+h2{
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 76px;
+}
+h3{
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 32px;
+}
+h4{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26px;
+}
+h5{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--grey40);
+}
+p{
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--secondary);
+}
+img{
+  max-width: 100%;
+}
+
+/* header  */
+.header-main{
+  background: var(--primary);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav > a:first-of-type{
+  border-right: 2px solid var(--white40);
+  padding-inline-end: 0.5rem;
 }
