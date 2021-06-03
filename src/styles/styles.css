@@ -64,7 +64,7 @@ img{
 }
 
 /* header  */
-.header-main{
+.header-main, .footer-content{
   background: var(--primary);
   padding: 1rem;
   display: flex;
@@ -186,6 +186,15 @@ img{
 }
 .pagination-content > a{
   text-decoration: underline;
+}
+/* footer    */
+.footer-content{
+  gap: 0;
+}
+.footer-item > p{
+  margin: 0;
+  font-size: 14px;
+
 }
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {

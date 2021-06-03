@@ -1,4 +1,5 @@
 import Header from '../pages/Header';
+import Footer from '../pages/Footer';
 import Home from '../pages/Home';
 import Characters from '../pages/Characters';
 import Episodes from '../pages/Episodes';
@@ -21,8 +22,10 @@ const routes = {
 const router = async () => {
   const header = null || document.getElementById('header');
   const content = null || document.getElementById('content');
+  const footer = null || document.getElementById('footer');
 
   header.innerHTML = await Header();
+  footer.innerHTML = await Footer();
   let hash = getHash(); // obtein the url
   let route = await resolveRoutes(hash);
   let render = routes[route] ? routes[route] : Error404;
